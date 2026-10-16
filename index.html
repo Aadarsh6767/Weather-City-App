@@ -1,18 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h2>Weather App</h2>
-        <input type="text" id="city" placeholder="Enter city name">
-        <button onclick="getWeather()" class="button">Get Weather</button>
-        <div id="weather-info"></div>
-    </div>
-    <script src="lab4.js"></script>
-</body>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h2>Weather App</h2>
+
+      <form class="search-box" onsubmit="handleSearch(event)">
+        <input
+          type="text"
+          id="city"
+          placeholder="Enter city name"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn">Get Weather</button>
+      </form>
+
+      <div id="weather-info" aria-live="polite"></div>
+    </main>
+
+    <script src="weather.js"></script>
+  </body>
 </html>
